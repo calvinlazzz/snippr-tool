@@ -11,7 +11,9 @@
   "dependencies": {
     "body-parser": "^2.2.0",
     "express": "^4.21.2",
-    "node.js": "^0.0.1-security"
+    "node.js": "^0.0.1-security",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^5.1.7"
   },
   "keywords": [
     "snippets",
