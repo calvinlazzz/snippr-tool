@@ -1,12 +1,14 @@
-const express = require('express');
-const SnippetsController = require('../controllers/snippetsController');
+import SnippetsController from '../controllers/snippetsController.js';
+import * as snippetModel from '../models/snippetModel.js'; // Import all named exports
+import express from 'express';
+
 
 const router = express.Router();
-const snippetsController = new SnippetsController();
+const snippetsController = new SnippetsController(snippetModel); // Pass snippetModel to the controller
 
-router.post('/snippets', snippetsController.addSnippet.bind(snippetsController));
-router.get('/snippets/:id', snippetsController.getSnippetById.bind(snippetsController));
-router.get('/snippets', snippetsController.getAllSnippets.bind(snippetsController));
-router.get('/snippets/lang/:language', snippetsController.getSnippetsByLang.bind(snippetsController));
+router.post('/', snippetsController.addSnippet.bind(snippetsController));
+router.get('/:id', snippetsController.getSnippetById.bind(snippetsController));
+router.get('/', snippetsController.getAllSnippets.bind(snippetsController));
+router.get('/lang/:language', snippetsController.getSnippetsByLang.bind(snippetsController));
 
-module.exports = router;
+export default router;

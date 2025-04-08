@@ -3,14 +3,16 @@
   "version": "1.0.0",
   "description": "A tool for managing and sharing code snippets.",
   "main": "src/app.js",
+  "type": "module",
   "scripts": {
     "start": "node src/app.js",
     "test": "echo \"No tests specified\" && exit 0"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "body-parser": "^2.2.0",
+    "express": "^4.21.2",
+    "node.js": "^0.0.1-security"
   },
-  "devDependencies": {},
   "keywords": [
     "snippets",
     "code",
