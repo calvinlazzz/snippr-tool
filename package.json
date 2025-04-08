@@ -1,0 +1,21 @@
+{
+  "name": "snippr-tool",
+  "version": "1.0.0",
+  "description": "A tool for managing and sharing code snippets.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "snippets",
+    "code",
+    "tool"
+  ],
+  "author": "Calvin La",
+  "license": "ISC"
+}
